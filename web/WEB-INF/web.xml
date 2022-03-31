@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>StartServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.StartServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>tossServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.tossServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>outcomeServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.outcomeServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EndSessionServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.EndSessionServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>StartServlet</servlet-name>
+        <url-pattern>/StartServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>tossServlet</servlet-name>
+        <url-pattern>/tossServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>outcomeServlet</servlet-name>
+        <url-pattern>/outcomeServlet.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>EndSessionServlet</servlet-name>
+        <url-pattern>/EndSessionServlet.do</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
